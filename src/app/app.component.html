@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!--div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -16,5 +16,36 @@
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
-</ul>
+</ul-->
 
+<div class="main">
+      <div class="sidebar">
+              <div class="sidebar-header" id="sidebar-header-id">
+                  <a href="/">
+                      <img src="assets/logo-wedotechnologies.png" width="156px" height="90px">
+                  </a>
+              </div>
+              <a class="nav-link" [routerLink] = "'/eids'">
+                  <span class="menu-icon-wrap">
+                      <!--img src="assets/icons/menu-clients.svg" width="16px" height="18px"-->
+                      <img src="https://img.icons8.com/office/16/000000/e-learning.png" width="32px" height="38px">
+                  </span>
+                  EID
+              </a>
+      </div>
+      <div class="header">
+
+      </div>
+      <div class="contentDiv">
+        <div class="specificContainer">
+          <div class="row">
+              <div class="col-md-12">
+                <router-outlet></router-outlet>
+              </div>
+          </div>
+        </div> 
+      </div>
+      <!--div class="content">
+        <router-outlet></router-outlet>
+      </div-->
+</div>
