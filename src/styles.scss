@@ -51,6 +51,7 @@
 .main {
     min-height: 100vh;
     transition: all 0.3s;
+    background-color: #f9f9f9;
 }
 .sidebar {
     height: 100%; /* Full-height: remove this if you want "auto" height */
@@ -59,7 +60,7 @@
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: rgb(211, 211, 211); /* Black */
+    background-color: #fdfdfd;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
 }
@@ -81,7 +82,7 @@
     background-color: rgb(255, 255, 255);
     overflow-x: hidden; 
     margin-left: 160px;
-    border: rgb(245, 245, 245);
+    border: #f9f9f9;
     border-width: 5px;
     border-style: solid;
     z-index: 2;
@@ -112,7 +113,7 @@
     //padding-top: 72px;
     //padding-bottom: 72px;
     width: -webkit-fill-available;
-    background-color: rgb(245, 243, 243);
+    background-color: #f9f9f9;
     /*border-width: 5px;
     border-style: solid;*/
 }
@@ -188,4 +189,17 @@
     margin-left: 5px;
     margin-right: 5px;
     width: -webkit-fill-available;
+}
+
+.search-container {
+    float: right;
+    //padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    //background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-style: solid 10px;
+    border-color:  rgb(110, 125, 175);
 }
