@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Routes, RouterModule, Router, ActivatedRoute } from '@angular/router';
+import { Subject } from 'rxjs';
 
 import { EID } from './eid.model';
 import { EIDService } from './eid.service';
+import { liveSearch } from '../util/utilfunctions';
 
 @Component({
   selector: 'app-eid',
@@ -14,6 +14,8 @@ import { EIDService } from './eid.service';
 export class EIDComponent implements OnInit {
   httpdata = null;
   dataSource = <EID> (this.httpdata);
+
+  private eidSubject = new Subject<string>();
 
   constructor(private eidService: EIDService) { }
 
@@ -29,6 +31,14 @@ export class EIDComponent implements OnInit {
       this.dataSource = data["results"] as any;
 
     });
+  }
+
+  readonly eid = this.eidSubject.pipe(
+    liveSearch(eid => this.eidService.filterEids(eid))
+  );
+
+  searchEID(eid: string) {
+    this.eidSubject.next(eid);
   }
 
 }

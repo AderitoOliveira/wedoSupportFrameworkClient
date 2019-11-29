@@ -65,7 +65,7 @@
 </div-->
 <div id="searchBarDiv">
   <div class="search-container">
-    <input type="text" placeholder="Pesquisar..." name="search">
+    <input  class="form-control" type="text" placeholder="Pesquisar..." name="search" [(ngModel)]="searchText">
   </div>
 </div>
 <div id="resp-table">
@@ -81,7 +81,7 @@
     </div>
   
     <div id="resp-table-body">
-      <div class="resp-table-row" *ngFor="let eid of dataSource">
+      <div class="resp-table-row" *ngFor="let eid of dataSource | filter: searchText">
         <div class="table-body-cell" >{{eid.KEY}}</div>
         <div class="table-body-cell" >{{eid.NAME}}</div>
         <div class="table-body-cell" >{{eid.EID}}</div>

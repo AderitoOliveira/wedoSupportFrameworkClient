@@ -15,14 +15,14 @@ export class EIDService {
     getEids(): Observable<EID> {
       
         console.log("Inside getEids");
-        /* this.httpClient.get<Vehicle>('http://localhost:3000/allclients').subscribe((data)=> {
-            console.log(data); 
-            this.httpdata = data;
-          });
-          
 
-        return of(this.httpdata); */
+        return this.httpClient.get('http://localhost:60100/rest/getAllEids').pipe(map((res:any) => res)) 
+    }
 
-        return this.httpClient.get('http://localhost:60100/rest/query').pipe(map((res:any) => res)) 
+    filterEids(eid: string): Observable<EID> {
+      
+        console.log("Inside filterEids");
+
+        return this.httpClient.get('http://localhost:60100/filterByEid/${eid}').pipe(map((res:any) => res)) 
     }
 }
