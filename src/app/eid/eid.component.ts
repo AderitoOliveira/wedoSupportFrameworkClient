@@ -14,6 +14,7 @@ import { liveSearch } from '../util/utilfunctions';
 export class EIDComponent implements OnInit {
   httpdata = null;
   dataSource = <EID> (this.httpdata);
+  searchText = null;
 
   private eidSubject = new Subject<string>();
 

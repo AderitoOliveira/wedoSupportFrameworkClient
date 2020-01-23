@@ -1,5 +1,4 @@
-import { Injectable } from '@angular/core/esm2015';
-import { HttpClientModule }  from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; 
 import { EID } from './eid.model';
 import { Observable, of } from 'rxjs';
@@ -16,7 +15,8 @@ export class EIDService {
       
         console.log("Inside getEids");
 
-        return this.httpClient.get('http://localhost:60100/rest/getAllEids').pipe(map((res:any) => res)) 
+        //return this.httpClient.get('http://localhost:60100/rest/getAllEids').pipe(map((res:any) => res)) -- WORKING CODE
+        return this.httpClient.get('http://localhost:60100/rest/getEidsMapping').pipe(map((res:any) => res)) 
     }
 
     filterEids(eid: string): Observable<EID> {
