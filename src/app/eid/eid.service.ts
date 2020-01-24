@@ -16,13 +16,13 @@ export class EIDService {
         console.log("Inside getEids");
 
         //return this.httpClient.get('http://localhost:60100/rest/getAllEids').pipe(map((res:any) => res)) -- WORKING CODE
-        return this.httpClient.get('http://localhost:60100/rest/getEidsMapping').pipe(map((res:any) => res)) 
+        return this.httpClient.get('http://wdssup02:60100/rest/getEidsMapping').pipe(map((res:any) => res)) 
     }
 
     filterEids(eid: string): Observable<EID> {
       
         console.log("Inside filterEids");
 
-        return this.httpClient.get('http://localhost:60100/filterByEid/${eid}').pipe(map((res:any) => res)) 
+        return this.httpClient.get('http://wdssup02:60100/filterByEid/${eid}').pipe(map((res:any) => res)) 
     }
 }

@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
 /*
 * {
@@ -54,23 +55,102 @@
     transition: all 0.3s;
     background-color: #f9f9f9;
 }
-.sidebar {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 160px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #fdfdfd;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
+
+#sidebar{
+    transition: all 0.3s;
+    width: 160px;
+    background-color: #e2e2e2;
+    min-width:160px;
+    position: fixed;
+    height: 100vh;
+    z-index: 1;
+    top:0px !important;
+    .sidebar-header{
+        background:transparent;
+        width: 100%;
+        float:  left;
+        padding: 18px 0px;
+        text-align: center;
+    }
+    ul.components{
+        width:100%;
+        float:left;
+        padding:0px;
+        margin-bottom: 0px;
+        border: none !important;
+        li{
+            color:#fff;
+            a{
+                //padding:9px 0px;
+                font-size: 18px;
+                font-weight: bold;
+                background-color: rgba(255, 255, 255, 0.02);
+                color:rgb(19, 19, 19) !important;
+                transition: all 0.3s;
+                span.menu-icon-wrap {
+                    width: 40px;
+                    text-align: center;
+                }
+                &:hover, &.active-nav{
+                    transition: all 0.3s;
+                    background-color: rgba(87, 87, 87, 0.1);
+                }
+            }
+            a:before{
+                content:"" !important;
+            }
+           
+        }
+        li.active{
+            a{
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+    #settings-nav {
+        position: absolute;
+        bottom: 0;
+    }
+    &.active{
+        max-width: 180px;
+    }
 }
 
-.sidebar .sidebar-header{
+#sidebar.active .sidebar-header strong {
+    display: block;
+}
+
+#sidebar ul li a {
+    text-align: left;
+}
+
+#sidebar.active ul li a {
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar .sidebar-header{
     background:transparent;
     width: 100%;
     float:  left;
-    padding: 18px 0px;
+    padding-top: 18px;
     text-align: center;
 }
 
@@ -114,7 +194,7 @@
     margin-left: 160px;
     background: transparent;
     position: relative;
-    z-index: 0;
+    z-index: 1;
     //padding-top: 72px;
     //padding-bottom: 72px;
     width: -webkit-fill-available;

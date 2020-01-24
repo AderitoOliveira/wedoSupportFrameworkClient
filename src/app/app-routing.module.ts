@@ -4,6 +4,7 @@ import { EIDComponent } from './eid/eid.component';
 
 const routes: Routes = [
     { path: 'eids', pathMatch: 'full', component: EIDComponent },
+    { path: '', redirectTo: '/', pathMatch: 'full' }
 ];
 
 @NgModule({
