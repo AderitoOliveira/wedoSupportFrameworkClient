@@ -207,7 +207,8 @@
     z-index: 1;
     //padding-top: 72px;
     //padding-bottom: 72px;
-    width: -webkit-fill-available;
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
     background-color: #f9f9f9;
     /*border-width: 5px;
     border-style: solid;*/
@@ -298,4 +299,27 @@
     cursor: pointer;
     border-style: solid 10px;
     border-color:  rgb(110, 125, 175);
+}
+
+#content-general-container {
+    width: 100%;
+    display: table;
+    padding: 5px;
+    margin-bottom: 70px;
+    background-color: black;
+}
+
+#genericbardiv {
+    padding: 5px;
+    background-color: rgb(255, 255, 255); 
+    margin-bottom: 30px;
+    margin-top: 30px;
+    height: 60px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: -webkit-fill-available;
+}
+
+.padding-10 {
+    margin-left: 10px;
 }

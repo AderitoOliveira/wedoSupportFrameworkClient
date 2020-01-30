@@ -103,26 +103,26 @@
 </div>
 <div id="resp-table">
     <div id="resp-table-header">
-      <div class="table-header-cell roundedcornerleft" >Mob_Project_Name</div>
-      <div class="table-header-cell" >Mob_Project_Desc</div>
-      <div class="table-header-cell" >Mob_Project_Code</div>
-      <div class="table-header-cell" >Mob_Old_EID</div>
-      <div class="table-header-cell" >WeDo_Key</div>
-      <div class="table-header-cell" >WeDo_Name</div>
-      <div class="table-header-cell" >WeDo_EID</div>
-      <div class="table-header-cell roundedcornerright" >WeDo_EID_Master</div>
+      <div class="table-header-cell roundedcornerleft" >KEY</div>
+      <div class="table-header-cell" >NAME</div>
+      <div class="table-header-cell" >EID</div>
+      <div class="table-header-cell" >MOB_PROJECT_CODE</div>
+      <div class="table-header-cell" >PACKAGE</div>
+      <div class="table-header-cell" >START_DATE</div>
+      <div class="table-header-cell" >END_DATE</div>
+      <div class="table-header-cell roundedcornerright" >STATUS</div>
     </div>
   
     <div id="resp-table-body">
       <div class="resp-table-row" *ngFor="let eid of dataSource | filter: searchText">
-        <div class="table-body-cell" >{{eid.MOBILEUM_PROJECT_NAME}}</div>
-        <div class="table-body-cell" >{{eid.MOBILEUM_PROJECT_DESCRIPTION}}</div>
-        <div class="table-body-cell bold-red" >{{eid.MOBILEUM_PROJECT_CODE}}</div>
-        <div class="table-body-cell" >{{eid.MOBILEUM_OLD_EID}}</div>
-        <div class="table-body-cell" >{{eid.WEDO_KEY}}</div>
-        <div class="table-body-cell" >{{eid.WEDO_NAME}}</div>
-        <div class="table-body-cell" >{{eid.WEDO_EID}}</div>
-        <div class="table-body-cell" >{{eid.WEDO_EID_MASTER}}</div>
+        <div class="table-body-cell" >{{eid.KEY}}</div>
+        <div class="table-body-cell" >{{eid.NAME}}</div>
+        <div class="table-body-cell bold-red" >{{eid.EID}}</div>
+        <div class="table-body-cell" >{{eid.MOB_PROJECT_CODE}}</div>
+        <div class="table-body-cell" >{{eid.PACKAGE}}</div>
+        <div class="table-body-cell" >{{eid.START_DATE}}</div>
+        <div class="table-body-cell" >{{eid.END_DATE}}</div>
+        <div class="table-body-cell" >{{eid.STATUS}}</div>
       </div>
     </div>
 </div> 

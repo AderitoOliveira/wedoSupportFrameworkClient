@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { EIDComponent } from './eid/eid.component';
 
-import { FilterPipe } from '../app/util/pipemodule'
+import { FilterPipe } from '../app/util/pipemodule';
+import { MainComponent } from './main/main.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     EIDComponent,
-    FilterPipe
+    FilterPipe,
+    MainComponent
   ],
   imports: [
     BrowserModule,
